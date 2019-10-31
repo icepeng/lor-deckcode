@@ -19,3 +19,28 @@ export function decode(bytes: number[]) {
 
   return result;
 }
+
+function get(value: number): number[] {
+  const result: number[] = [];
+
+  if (value === 0) {
+    return [0];
+  }
+
+  while (value !== 0) {
+    let byteVal = value & AllButMSB;
+    value >>>= 7;
+
+    if (value !== 0) {
+      byteVal |= JustMSB;
+    }
+
+    result.push(byteVal);
+  }
+
+  return result;
+}
+
+export function encode(integers: number[]) {
+  return integers.map(get).reduce((arr, x) => [...arr, ...x], []);
+}
