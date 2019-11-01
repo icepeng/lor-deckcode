@@ -37,7 +37,7 @@ function groupCards(cards: Card[]) {
         obj[setFaction].push(parseCode(card.code));
         return obj;
       },
-      {} as Record<string, Array<{ code: string; set: number; faction: number; number: number }>>,
+      {} as Record<string, Array<ReturnType<typeof parseCode>>>,
     ),
   );
 
