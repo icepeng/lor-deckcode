@@ -1,4 +1,4 @@
 export interface Card {
-    code: string;
-    count: number;
+  code: string;
+  count: number;
 }
