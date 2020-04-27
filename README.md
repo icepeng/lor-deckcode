@@ -1,6 +1,6 @@
 # LoR Deckcode
 
-Legends of Runeterra deck encoder/decoder in TypeScript. Port of [LorDeckCodes](https://github.com/RiotGames/LoRDeckCodes).
+Legends of Runeterra deck encoder/decoder in TypeScript. Based on [LorDeckCodes](https://github.com/RiotGames/LoRDeckCodes) & [icepeng-rep](https://github.com/icepeng/lor-deckcode). This is an up-to-date code including the new set, Builded for [LoRGuardian](https://lorguardian.com) and for the commuinty.
 
 ## Install
 
