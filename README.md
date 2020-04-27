@@ -5,7 +5,7 @@ Legends of Runeterra deck encoder/decoder in TypeScript. Based on [LorDeckCodes]
 ## Install
 
 ```
-npm i lor-deckcode
+npm i lorguardian-deckcode
 ```
 
 ## Example
@@ -13,7 +13,7 @@ npm i lor-deckcode
 TypeScript
 
 ```ts
-import { decode, encode } from 'lor-deckcode';
+import { decode, encode } from 'lorguardian-deckcode';
 
 const deck = decode('CEBAIAIFB4WDANQIAEAQGDAUDAQSIJZUAIAQCBIFAEAQCBAA');
 /*
