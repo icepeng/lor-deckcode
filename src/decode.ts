@@ -2,12 +2,13 @@ import * as Base32 from './base32';
 import * as Varint from './varint';
 import { fromID } from './faction';
 import { Card } from './card.interface';
+import { MAX_KNOWN_VERSION } from './constants';
 
 export function decode(deckCode: string): Card[] {
   const [firstByte, ...otherBytes] = Base32.decode(deckCode);
   const version = firstByte & 0xf;
-  if (version > 1) {
-    throw new Error(`Requires higher version of this library. library - 1, provided - ${version}`);
+  if (version > MAX_KNOWN_VERSION) {
+    throw new Error(`Requires higher version of this library. library - ${MAX_KNOWN_VERSION}, provided - ${version}`);
   }
 
   const integers = Varint.decode(otherBytes).reverse();
