@@ -6,7 +6,7 @@ export const fromID: Record<number, string> = {
   4: 'PZ',
   5: 'SI',
   6: 'BW',
-  9: 'MT'
+  9: 'MT',
 };
 
 export const fromCode = Object.entries(fromID).reduce(
