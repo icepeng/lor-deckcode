@@ -5,7 +5,7 @@ import * as Varint from './varint';
 
 export function encode(cards: Card[]): string {
   const result = Base32.encode([
-    0x11,
+    0x12,
     ...Varint.encode(
       [3, 2, 1].map(count => groupCards(cards.filter(x => x.count === count))).reduce((arr, x) => [...arr, ...x], []),
     ),
@@ -13,7 +13,6 @@ export function encode(cards: Card[]): string {
 
   return result;
 }
-
 function parseCode(code: string) {
   const set = parseInt(code.slice(0, 2), 10);
   const faction = fromCode[code.slice(2, 4)];
