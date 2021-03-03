@@ -6,7 +6,7 @@ import { Card } from './card.interface';
 export function decode(deckCode: string): Card[] {
   const [firstByte, ...otherBytes] = Base32.decode(deckCode);
   const version = firstByte & 0xf;
-  if (version > 3) {
+  if (version > 4) {
     throw new Error(`Requires higher version of this library. library - 1, provided - ${version}`);
   }
 

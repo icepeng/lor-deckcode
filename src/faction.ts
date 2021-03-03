@@ -6,6 +6,7 @@ export const fromID: Record<number, string> = {
   4: 'PZ',
   5: 'SI',
   6: 'BW',
+  7: 'SH',
   9: 'MT',
 };
 
