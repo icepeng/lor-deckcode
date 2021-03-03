@@ -5,7 +5,7 @@ import * as Varint from './varint';
 
 export function encode(cards: Card[]): string {
   const result = Base32.encode([
-    0x12,
+    0x13,
     ...Varint.encode(
       [3, 2, 1].map(count => groupCards(cards.filter(x => x.count === count))).reduce((arr, x) => [...arr, ...x], []),
     ),
